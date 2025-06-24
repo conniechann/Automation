@@ -47,4 +47,14 @@ public class BasePage {
             return false;
         }
     }
+
+    protected boolean waitForIsHidden(By locator) {
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+            return true;
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
 }
