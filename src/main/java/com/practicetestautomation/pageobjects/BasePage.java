@@ -56,5 +56,4 @@ public class BasePage {
             return false;
         }
     }
-
 }

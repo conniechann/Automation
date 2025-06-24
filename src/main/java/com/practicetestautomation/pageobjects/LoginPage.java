@@ -10,13 +10,11 @@ public class LoginPage extends BasePage {
     private By submitButtonLocator = By.id("submit");
     private By errorMessageLocator = By.id("error");
 
-    // Constructor to initialize the WebDriver instance, inherits from BasePage
     public LoginPage(WebDriver driver) {
         super(driver);
-
     }
 
-    public void visit(){
+    public void visit() {
         super.visit("https://practicetestautomation.com/practice-test-login/");
     }
 
@@ -43,5 +41,4 @@ public class LoginPage extends BasePage {
         WebElement errorMessageElement = waitForElement(errorMessageLocator);
         return errorMessageElement.getText();
     }
-
 }
